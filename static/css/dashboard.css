@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    background-color: #58855e;
+    color: aliceblue;
+    overflow: hidden;
+   
+}
+
+.header {
+    position: fixed;
+    top: 0.6%;
+    left: 0;
+    width: 100%;
+    padding: 10px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.header .logo-img {
+   width: 60px; 
+   height: auto; 
+   vertical-align: middle; 
+   margin-right: 10px; 
+   background-color: #58855e;
+   position: absolute;
+   left: 2%;
+   top: 18%;
+}
+
+.header .logo-text {
+   font-size: 30px;
+   display: inline-block;
+   vertical-align: middle;
+   color: #87ff83;
+   background-color: #58855e;
+   position: absolute;
+   left: 7%;
+   top: 35%;
+}
+
+
+.navbar a {
+    font-size: 25px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left:35px ;
+    transition: .3s;
+
+}
+
+
+.navbar a:hover, 
+.navbar a.active {
+    color: #FFFF80;
+    border-bottom: 2px solid #bebe64;
+
+}
+
+.navbar a:hover::after, 
+.navbar a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Adjust the height of the underline */
+   
+}
+
+.dashboard {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+
+}
+
+.dashboard-content{
+    max-width: 600px; 
+
+}
+
+.dashboard-content h1 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    position: absolute;
+    top: 20%;
+    left: 21%;
+    color: #FFFDB5;
+}
+
+.label1 {
+    width: 400px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    background-color: #B0C5A4; /* Example background color */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow */
+    position: absolute;
+    left: 3%;
+    top: 30%;
+}
+
+.label2 {
+    width: 400px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    background-color: #B0C5A4; /* Example background color */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow */
+    position: absolute;
+    left: 31%;
+    top: 30%;
+}
+
+.dashboard-content .nav-img {
+   width: 8%; /* Adjust width as needed */
+   height: 50; /* Maintain aspect ratio */
+   background-color: #58855e;
+   position: absolute; /* Set child container to absolute */
+   top: 0%; /* Adjust top positioning */
+   right: 0%; /* Adjust right positioning */
+   /* Optional: Adjust other styles as needed */
+}
+
+.dashboard-content .bg-img {
+   width: 40%; /* Adjust width as needed */
+   height: auto; /* Maintain aspect ratio */
+   background-color: #58855e;
+   position: absolute; /* Set child container to absolute */
+   top: 10%; /* Adjust top positioning */
+   right: 0%; /* Adjust right positioning */
+   /* Optional: Adjust other styles as needed */
+}
+
+.dashboard-content .bar-img {
+   width: 70%; /* Adjust width as needed */
+   height: 50; /* Maintain aspect ratio */
+   background-color: #58855e;
+   position: absolute; /* Set child container to absolute */
+   top: 90%; /* Adjust top positioning */
+   right: 0%; /* Adjust right positioning */
+   /* Optional: Adjust other styles as needed */
+}
+

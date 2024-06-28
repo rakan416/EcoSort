@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    background-color: #58855e;
+    color: aliceblue;
+    overflow: hidden;
+   
+}
+
+.header {
+    position: fixed;
+    top: 0.6%;
+    left: 0;
+    width: 100%;
+    padding: 10px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.header .logo-img {
+   width: 60px; 
+   height: auto; 
+   vertical-align: middle; 
+   margin-right: 10px; 
+   background-color: #58855e;
+   position: absolute;
+   left: 2%;
+   top: 18%;
+}
+
+.header .logo-text {
+   font-size: 30px;
+   display: inline-block;
+   vertical-align: middle;
+   color: #87ff83;
+   background-color: #58855e;
+   position: absolute;
+   left: 7%;
+   top: 35%;
+}
+
+
+.navbar a {
+    font-size: 25px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left:35px ;
+    transition: .3s;
+
+}
+
+.navbar a:hover, 
+.navbar a.active {
+    color: #FFFF80;
+    border-bottom: 2px solid #FFFF80;
+
+}
+
+.navbar a:hover::after, 
+.navbar a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Adjust the height of the underline */
+   
+}
+
+
+.history {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+
+}
+
+.history-content{
+    max-width: 600px; 
+
+}
+
+.history-content h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+    position: absolute;
+    top: 18%;
+    left: 26%;
+    color: #ebbb4c;
+    z-index: 10;
+}
+
+.label1 {
+    width: 1000px; /* Adjust width as needed */
+    height: 450px; /* Adjust height as needed */
+    background-color: #82887e; /* Example background color */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow */
+    position: absolute;
+    left: 25%;
+    top: 30%;
+    z-index: 10;
+    overflow-y: auto;
+    padding: 5%;
+}
+
+
+.file-name {
+    position: absolute;
+    left: 12%;
+    font-size: 40px;
+    display: flex;
+    gap: 120px;
+    top: 3%;
+}
+
+.file-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    width: 80%; /* Adjust width as needed */
+    text-align: center;
+}
+.file-item {
+    margin-bottom: 10px;
+}
+.file-button {
+    background-color: #b7eab9; /* Change to desired background color */
+    border: 1px solid #f4b0b0;
+    padding: 10px 20px; /* Make buttons larger */
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    color: rgb(244, 173, 31);
+    text-align: center;
+    font-weight: 800;
+}
+.file-button:hover {
+    background-color: #74fd7b;
+}
+
+.history-content .nav-img {
+   width: 8%; /* Adjust width as needed */
+   height: 50; /* Maintain aspect ratio */
+   background-color: #58855e;
+   position: absolute; /* Set child container to absolute */
+   top: 0%; /* Adjust top positioning */
+   right: 0%; /* Adjust right positioning */
+   /* Optional: Adjust other styles as needed */
+}
+
+.history-content .bg-img {
+   width: 85%; /* Adjust width as needed */
+   height: auto; /* Maintain aspect ratio */
+   background-color: #58855e;
+   position: absolute; /* Set child container to absolute */
+   top: 10%; /* Adjust top positioning */
+   right: 0%; /* Adjust right positioning */
+   z-index: 1;
+  
+}
+
+
+
