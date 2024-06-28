@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+    <link rel="stylesheet" href="{% static 'css/history.css' %}">
+
+</head>
+<body>
+    <header class="header">
+        <a href="#">
+            <img src="{% static 'image/eco-friendly 1.png' %}" alt="Logo" class="logo-img">
+            <span class="logo-text">EcoSort</span>
+        </a>
+
+        <nav class="navbar">
+            <a href="/homepage">Home</a>
+            <a href="/dashboard">Dashboard</a>
+            <a href="#" class='active'>History</a>
+        </nav>
+    </header>
+
+    <section class="history">
+        <div class="history-content">
+            <h1>History</h1>
+            <div class="label1">
+                    <div class="label-header">
+                        <span class="file-name">
+                            <span class="file-part">Nama File</span>
+                            <span class="file-part">Tanggal</span>
+                            <span class="file-part">Waktu</span>
+                        </span>
+                    </div>
+                    <div class="button-container">
+                        <ul id="fileList" class="file-list">
+                            {% for tgl in datelist %}
+                            <li class="file-item">
+                                <button class="file-button">{{ tgl }}</button>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                
+                <img src="{% static 'image/Nav.png' %}" alt="bg" class="nav-img">
+                <img src="{% static 'image/Bg.png' %}" alt="bg" class="bg-img">
+                <h4>
+                </h4>
+        </div>
+    </section>
+</body>
+</html>

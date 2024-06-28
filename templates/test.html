@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Image Files</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+        button {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Display Image Files from media/images</h1>
+    <p>Please select the "media/images" folder.</p>
+    <input type="file" id="fileInput" webkitdirectory directory multiple>
+    <ul id="fileList"></ul>
+
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const fileList = event.target.files;
+            const ul = document.getElementById('fileList');
+            ul.innerHTML = ''; // Clear previous list
+
+            for (let i = 0; i < fileList.length; i++) {
+                const file = fileList[i];
+                if (file.type.startsWith('image/')) {
+                    const li = document.createElement('li');
+                    const button = document.createElement('button');
+                    button.textContent = file.name;
+                    button.addEventListener('click', function() {
+                        // Handle button click (for example, open the image)
+                        alert('You clicked: ' + file.name);
+                    });
+                    li.appendChild(button);
+                    ul.appendChild(li);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

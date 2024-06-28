@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{%  load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <header class="header">
+        <a href="#">
+            <img src="{% static 'image/eco-friendly 1.png' %}" alt="Logo" class="logo-img">
+            <span class="logo-text">EcoSort</span>
+        </a>
+
+
+        <nav class="navbar">
+            <a href="#"class='active'>Home</a>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/history">History</a>
+            {% if request.user.is_authenticated %}
+            <a href="{% url 'first:out' %}">LogOut</a>
+            {% endif %}
+        </nav>
+
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h1>EcoSort</h1>
+            <h3>Sort Your Trash From Now</h3>
+            <p>EcoSort Merupakan Sebuah Software yang Membantu User Dalam Mengenali Jenis Sampah
+                Serta Mengedukasi Jenis Sampah yang Dikelolah Oleh User
+            </p>
+            <img src="{% static 'image/Nav.png' %}" alt="bg" class="nav-img">
+            <img src="{% static 'image/Bg.png' %}" alt="bg" class="bg-img">
+            <img src="{% static 'image/Bar.png' %}" alt="bg" class="bar-img">
+
+            <div class="btn-box">
+                <a href="/first">Sort Now</a>
+                {% comment %} <a href="#">Let Talk</a> {% endcomment %}
+            </div>
+        </div>
+    </section>
+
+   
+</body>
+</html>
