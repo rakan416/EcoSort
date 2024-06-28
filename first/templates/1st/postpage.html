@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block title %}
+    {{ post.title }}
+{% endblock %}
+{% block content %}
+<h1>{{ post.title }}</h1>
+        <h3>{{ post.body }}</h3><br>
+        Waktu Dibuat : {{ post.date }} <br>
+        <img src="{{ post.banner.url }}" alt="Picture" width="300px">
+{% endblock %}

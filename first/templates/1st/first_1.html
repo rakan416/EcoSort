@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block title %}
+    Acces Databased
+{% endblock %}
+{% block content %}
+<h1> Isi Post Database </h1>
+    {% for post in posts %}
+        <h2><a href="{% url 'post' slug=post.slug %}">{{ post.title }}</a></h2>
+        <br>
+    {% endfor %}
+{% endblock %}
